@@ -5,6 +5,8 @@ terraform {
       version = "4.12.1"    
        }   
       }
+       backend "remote" {
+        organization = "lightcow"
       cloud {
         # The name of your Terraform Cloud organization.
         organization = "lightcow"
