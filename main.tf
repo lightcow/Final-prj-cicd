@@ -12,7 +12,8 @@ terraform {
         workspaces {
           name = "cicdtest"
         }
-    
-
+      }
+      provider "aws" {
+        region = "ap-northeast-2"
       }
     }
