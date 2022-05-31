@@ -5,7 +5,7 @@ terraform {
       version = "4.12.1"    
        }   
       }
-       Cloud {
+       cloud {
         organization = "lightcow"
 
         # The name of the Terraform Cloud workspace to store Terraform state files in.
