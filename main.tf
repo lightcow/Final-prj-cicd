@@ -7,6 +7,7 @@ terraform {
       }
        backend "remote" {
         organization = "lightcow"
+       }
       cloud {
         # The name of your Terraform Cloud organization.
         organization = "lightcow"
