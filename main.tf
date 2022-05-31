@@ -1,5 +1,10 @@
 terraform {
-      backend "remote" {
+  required_providers {     
+    aws = {       
+      source  = "hashicorp/aws"       
+      version = "4.12.1"     }   
+      }
+      Cloud {
         # The name of your Terraform Cloud organization.
         organization = "lightcow"
 
