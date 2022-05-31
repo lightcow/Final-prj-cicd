@@ -1,5 +1,5 @@
 
-resource "aws_iam_role" "status" {
+resource "aws_iam_role" "iam_status" {
   name = "lambda_role_status"
 
   assume_role_policy = jsonencode({
@@ -18,16 +18,17 @@ resource "aws_iam_role" "status" {
 
 }
 
-resource "aws_iam_role_policy_attachment" "status" {
-  role       = aws_iam_role.status.name
-  policy_arn = aws_iam_policy.status.arn
+resource "aws_iam_role_policy_attachment" "policy_attachment_status" {
+  role       = aws_iam_role.iam_status.name
+  policy_arn = aws_iam_policy.policy_status.arn
 }
 
-resource "aws_iam_policy" "status" {
+resource "aws_iam_policy" "policy_status" {
     policy = data.aws_iam_policy_document.status.json
 }
 
 data "aws_iam_policy_document" "status" {
+
 
   statement {
     sid       = "AllowInvokingLambdas"

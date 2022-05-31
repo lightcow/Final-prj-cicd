@@ -4,7 +4,7 @@ resource "aws_lambda_function" "terrform-status-lambda" {
   # path.module in the filename.
   filename      = "${data.archive_file.zip.output_path}"
   function_name = "terrform-status-lambda"
-  role          = aws_iam_role.status.arn
+  role          = aws_iam_role.iam_status.arn
   handler       = "status_handler.handler"
 
   # The filebase64sha256() function is available in Terraform 0.11.12 and later
