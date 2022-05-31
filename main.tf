@@ -4,7 +4,7 @@ terraform {
       source  = "hashicorp/aws"       
       version = "4.12.1"     }   
       }
-      Cloud {
+      cloud {
         # The name of your Terraform Cloud organization.
         organization = "lightcow"
 
