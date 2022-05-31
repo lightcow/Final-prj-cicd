@@ -6,7 +6,7 @@ terraform {
       }   
     }
     
-    clouds  {
+    cloud  {
       organization = "lightcow"
       workspaces {
         name = "cicdtest"
