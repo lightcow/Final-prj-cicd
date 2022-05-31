@@ -6,7 +6,7 @@ terraform {
        }   
       }
        backend "remote" {
-        organization = "lightcow"
+        organization = "lightcow10"
     
   
 
