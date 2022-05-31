@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "policy_attachment_status" {
 }
 
 resource "aws_iam_policy" "policy_status" {
-    policy = data.aws_iam_policy_document.status.json
+    policy = data.aws_iam_policy_document.aws_iam_policy_document_status.json
 }
 
 data "aws_iam_policy_document" "aws_iam_policy_document_status" {
