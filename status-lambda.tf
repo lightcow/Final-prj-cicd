@@ -17,7 +17,13 @@ resource "aws_lambda_function" "terrform-status-lambda" {
 
 }
 
- data "archive_file" "zip" {
+data "archive_file" "zip" {
+  type             = "zip"
+  source_dir      = "${path.module}/lambdadb"
+  output_file_mode = "0666"
+  output_path      = "${path.module}/files/lambdadb.zip"
+}
+ data "archive_file" "zip3" {
   type        = "zip"
   source_file = "${path.module}/lambdadb/status_handler.js"
   output_path = "${path.module}/lambdadb/status.handler.zip"
