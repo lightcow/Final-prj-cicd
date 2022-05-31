@@ -6,7 +6,7 @@ terraform {
       }   
     }
     
-    cloud "remote" {
+    cloud {
       organization = "lightcow"
       workspaces {
         name = "cicdtest"
