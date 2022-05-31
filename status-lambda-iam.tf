@@ -27,7 +27,7 @@ resource "aws_iam_policy" "policy_status" {
     policy = data.aws_iam_policy_document.status.json
 }
 
-data "aws_iam_policy_document" "status" {
+data "aws_iam_policy_document" "aws_iam_policy_document_status" {
 
 
   statement {
