@@ -2,7 +2,8 @@ terraform {
   required_providers {     
     aws = {       
       source  = "hashicorp/aws"       
-      version = "4.12.1"     }   
+      version = "4.12.1"    
+       }   
       }
       cloud {
         # The name of your Terraform Cloud organization.
@@ -12,5 +13,9 @@ terraform {
         workspaces {
           name = "cicdtest"
         }
+       provider "aws" {
+          region = "ap-northeast-2"
+          }
+
       }
     }

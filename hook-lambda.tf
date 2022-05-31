@@ -12,7 +12,7 @@ resource "aws_lambda_function" "terrform-hook-lambda" {
   # source_code_hash = "${base64sha256(file("lambda_function_payload.zip"))}"
     source_code_hash = "${data.archive_file.hookzip.output_base64sha256}"
 
-  runtime = "nodejs16.x"
+  runtime = "nodejs14.x"
  }
 data "archive_file" "hookzip" {
   type             = "zip"
